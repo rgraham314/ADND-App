@@ -5,8 +5,8 @@ XS<-0
 for (i in 1:6){
   a<-c(dice(6,4))  #roll 4d6
   adjsum <- sum(a)-a[which.min(a)]  #remove least value and sum
-  characteristics[i]<-adjsum  #This gives you 4d6 and removes the lowest vaue to 
-   #lowest d6, adding the rest
+  characteristics[i]<-adjsum  #This gives you 4d6 and removes the lowest
+  #d6, adding the rest
 }
 
 #Test
@@ -47,10 +47,10 @@ repeat{
         reroll <- 1
       }
     }
-  } else if(characteristics[5] < 6){
-    if(characteristics[6] < 6){
-      reroll <- 1
-    }
+  # } else if(characteristics[5] < 6){
+  #   if(characteristics[6] < 6){
+  #     reroll <- 1
+  #   }
   }
   
   if(reroll == 1){
