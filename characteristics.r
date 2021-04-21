@@ -1,16 +1,26 @@
 # Create 6 characteristics = I / W / Ch / S / D / C
 characteristics<-c(INT=0,WIS=0,CHR=0,STR=0,DEX=0,CON=0)
-exStr<-FALSE
+XS<-0
 
 for (i in 1:6){
   a<-c(dice(6,4))  #roll 4d6
   adjsum <- sum(a)-a[which.min(a)]  #remove least value and sum
-  characteristics[i]<-adjsum
+  characteristics[i]<-adjsum  #This gives you 4d6 and removes the lowest vaue to 
+   #lowest d6, adding the rest
 }
+
+#Test
+#characteristics <- c(5,10,10,10,10,5)
+
+#print("characteristics = ", sep="", quotes=FALSE)
+#print(characteristics)
 
 ### Check if stats are too low
 reroll <- 0
 rep <- 0
+
+if(characteristics[4] == 18)
+  XS<-dice(100,1)
 
 repeat{
   if(characteristics[1] < 6){
@@ -48,6 +58,8 @@ repeat{
       a<-c(dice(6,4))
       adjsum <- sum(a)-a[which.min(a)]
       characteristics[i]<-adjsum
+      if(characteristics[4] == 18)
+        XS<-dice(100,1)
       reroll <- 0
     }
   }
@@ -63,6 +75,5 @@ repeat{
   }
 }
 
-print("new characteristics = ", sep="", quotes=FALSE)
-print(characteristics)
-
+#print("new characteristics = ", sep="", quotes=FALSE)
+#print(characteristics)
