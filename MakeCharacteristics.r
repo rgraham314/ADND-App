@@ -8,7 +8,7 @@ for (i in 1:6){
   characteristics[i]<-adjsum  #This gives you 4d6 and removes the lowest
   #d6, adding the rest
 }
-
+ 
 #Test
 #characteristics <- c(5,10,10,10,10,5)
 
