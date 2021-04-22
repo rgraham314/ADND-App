@@ -11,42 +11,42 @@ if(s == 3) {
   StrTbl[4] <- 10
   StrTbl[5] <- 2
   StrTbl[6] <- 0
-} else if (s > 3 && s < 6) {
+} else if (s %in% c(4:5)) {
   StrTbl[1] <- -2
   StrTbl[2] <- -1
   StrTbl[3] <- 10
   StrTbl[4] <- 25
   StrTbl[5] <- 3
   StrTbl[6] <- 0
-} else if (s > 5 && s < 8) {
+} else if (s %in% c(6:7)) {
   StrTbl[1] <- -1
   StrTbl[2] <- 0
   StrTbl[3] <- 20
   StrTbl[4] <- 55
   StrTbl[5] <- 4
   StrTbl[6] <- 0
-} else if (s > 7 && s < 10) {
+} else if (s %in% c(8:9)) {
   StrTbl[1] <- 0
   StrTbl[2] <- 0
   StrTbl[3] <- 35
   StrTbl[4] <- 90
   StrTbl[5] <- 5
   StrTbl[6] <- 1
-} else if (s > 9 && s < 12) {
+} else if (s %in% c(10:11)) {
   StrTbl[1] <- 0
   StrTbl[2] <- 0
   StrTbl[3] <- 40
   StrTbl[4] <- 115
   StrTbl[5] <- 6
   StrTbl[6] <- 2
-} else if (s > 11 && s < 14) {
+} else if (s %in% c(12:13)) {
   StrTbl[1] <- 0
   StrTbl[2] <- 0
   StrTbl[3] <- 45
   StrTbl[4] <- 140
   StrTbl[5] <- 7
   StrTbl[6] <- 4
-} else if (s > 13 && s < 16) {
+} else if (s %in% c(14:15)) {
   StrTbl[1] <- 0
   StrTbl[2] <- 0
   StrTbl[3] <- 55
@@ -75,11 +75,3 @@ if(s == 3) {
   StrTbl[5] <- 11
   StrTbl[6] <- 16
 }
-
-# characteristics
-# 
-# StrTbl
-# 
-# XS
-
-#source(local = TRUE, "ExStrTbl.r")
