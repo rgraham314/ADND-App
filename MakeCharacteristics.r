@@ -19,10 +19,7 @@ for (i in 1:6){
 reroll <- 0
 rep <- 0
 
-if(characteristics[4] == 18)
-  XS<-dice(100,1)
-
-repeat{
+ repeat{
   if(characteristics[1] < 6){
     for(i in 2:6){
       if(characteristics[i] < 6){
@@ -58,8 +55,6 @@ repeat{
       a<-c(dice(6,4))
       adjsum <- sum(a)-a[which.min(a)]
       characteristics[i]<-adjsum
-      if(characteristics[4] == 18)
-        XS<-dice(100,1)
       reroll <- 0
     }
   }
