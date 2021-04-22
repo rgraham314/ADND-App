@@ -69,6 +69,6 @@ rep <- 0
     break
   }
 }
-
+ 
 #print("new characteristics = ", sep="", quotes=FALSE)
 #print(characteristics)
