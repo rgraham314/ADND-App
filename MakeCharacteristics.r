@@ -4,8 +4,8 @@ characteristics<-c(INT=0,WIS=0,CHR=0,STR=0,DEX=0,CON=0)
 reroll <- 0
 rep <- 0
 
-### Check if more than one characteristic is less than 6; 
-### If so then reroll
+### Repeatedly check to see if 2 or mor char's are 5 or less. 
+### If TRUE then reroll
 test<-c(0,1,3,4,5)
 
 repeat{
