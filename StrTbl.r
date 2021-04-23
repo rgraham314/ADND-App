@@ -1,5 +1,6 @@
 # determine ability adjustment - Strength
-StrTbl<-c(hitProb=0, dmgAdj=0, wgtAllow=0, maxPress=0, openDoors=0, bBars_lGates=0)
+StrTbl<-c(hitProb=0, dmgAdj=0, wgtAllow=0, maxPress=0, 
+          openStuckDoors=0, bBars_lGates=0, openHeldDoors=0)
 
 if(characteristics[4] == 3){
        StrTbl[1] <- -3
@@ -10,7 +11,7 @@ if(characteristics[4] == 3){
        StrTbl[6] <- 0
 }
 
-if(characteristics[4] > 3 && characteristics[4] < 6){
+if(characteristics[4] %in% c(4,5)){
   StrTbl[1] <- -2
   StrTbl[2] <- -1
   StrTbl[3] <- 10
@@ -19,7 +20,7 @@ if(characteristics[4] > 3 && characteristics[4] < 6){
   StrTbl[6] <- 0
 }
 
-if(characteristics[4] > 5 && characteristics[4] < 8){
+if(characteristics[4] %in% c(6,7)){
   StrTbl[1] <- -1
   StrTbl[2] <- 0
   StrTbl[3] <- 20
@@ -28,7 +29,7 @@ if(characteristics[4] > 5 && characteristics[4] < 8){
   StrTbl[6] <- 0
 }
 
-if(characteristics[4] > 7 && characteristics[4] < 10){
+if(characteristics[4] %in% c(8,9)){
   StrTbl[1] <- 0
   StrTbl[2] <- 0
   StrTbl[3] <- 35
@@ -37,7 +38,7 @@ if(characteristics[4] > 7 && characteristics[4] < 10){
   StrTbl[6] <- 1
 }
 
-if(characteristics[4] > 9 && characteristics[4] < 12){
+if(characteristics[4]  %in% c(10,11)){
   StrTbl[1] <- 0
   StrTbl[2] <- 0
   StrTbl[3] <- 40
@@ -46,7 +47,7 @@ if(characteristics[4] > 9 && characteristics[4] < 12){
   StrTbl[6] <- 2
 }
 
-if(characteristics[4] > 11 && characteristics[4] < 14){
+if(characteristics[4] %in% c(12,13)){
   StrTbl[1] <- 0
   StrTbl[2] <- 0
   StrTbl[3] <- 45
@@ -55,7 +56,7 @@ if(characteristics[4] > 11 && characteristics[4] < 14){
   StrTbl[6] <- 4
 }
 
-if(characteristics[4] > 13 && characteristics[4] < 16){
+if(characteristics[4] %in% c(14,15)){
   StrTbl[1] <- 0
   StrTbl[2] <- 0
   StrTbl[3] <- 55
@@ -89,6 +90,36 @@ if(characteristics[4] == 18) {
   StrTbl[4] <- 255
   StrTbl[5] <- 11
   StrTbl[6] <- 16
+}
+
+if(characteristics[4] == 19) {
+  StrTbl[1] <- 3
+  StrTbl[2] <- 7
+  StrTbl[3] <- 485
+  StrTbl[4] <- 640
+  StrTbl[5] <- 16
+  StrTbl[6] <- 50
+  StrTbl[7] <- 8
+}
+
+if(characteristics[4] == 20) {
+  StrTbl[1] <- 3
+  StrTbl[2] <- 8
+  StrTbl[3] <- 535
+  StrTbl[4] <- 700
+  StrTbl[5] <- 17
+  StrTbl[6] <- 60
+  StrTbl[7] <- 10
+}
+
+if(characteristics[4] == 21) {
+  StrTbl[1] <- 4
+  StrTbl[2] <- 9
+  StrTbl[3] <- 635
+  StrTbl[4] <- 810
+  StrTbl[5] <- 17
+  StrTbl[6] <- 70
+  StrTbl[7] <- 12
 }
 
 StrTbl
