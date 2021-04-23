@@ -36,6 +36,7 @@ if(XS %in% c(1:50)) {
   StrTbl[4] <- 380
   StrTbl[5] <- 15
   StrTbl[6] <- 35
+  StrTbl[7] <- 3
 } else if (XS == 100) {
   StrTbl[1] <- 3
   StrTbl[2] <- 6
@@ -43,7 +44,9 @@ if(XS %in% c(1:50)) {
   StrTbl[4] <- 480
   StrTbl[5] <- 16
   StrTbl[6] <- 40
+  StrTbl[7] <- 6
 }
 
 characteristics
 XS
+StrTbl
