@@ -3,7 +3,7 @@
 #Con Adjustments - Reaction Adjustment, Missile Attack 
 #Adjustment, Defebsive Adjustment
 
-ConAdjTbl <- c(0,0,0,0,0)
+ConAdjTbl <- c(hpAdj=0, SysShock=0, ResSurv=0, poisonSave=0, regen=0)
 FtrConAdj <- 0
 
 if(characteristics[6] == 3)
